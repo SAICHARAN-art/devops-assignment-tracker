@@ -1,0 +1,18 @@
+{
+  "name": "devops-assignment-tracker",
+  "version": "1.0.0",
+  "description": "Simple DevOps syllabus project - College Assignment Tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "test:selenium": "node tests/selenium.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.27.0"
+  }
+}

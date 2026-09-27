@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Assignment Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>College Assignment Tracker</h1>
+      <p>Track assignments, deadlines and completion status.</p>
+    </header>
+
+    <section class="card">
+      <h2>Add Assignment</h2>
+      <form id="assignment-form">
+        <input id="title" placeholder="Assignment title" required />
+        <input id="subject" placeholder="Subject (e.g. DevOps)" required />
+        <input id="due_date" type="date" required />
+        <button type="submit">Add Assignment</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2>Assignments</h2>
+        <span id="count"></span>
+      </div>
+      <div id="message"></div>
+      <table>
+        <thead><tr><th>Title</th><th>Subject</th><th>Due</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody id="assignment-list"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

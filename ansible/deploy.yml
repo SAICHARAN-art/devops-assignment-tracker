@@ -1,0 +1,17 @@
+- name: Deploy Assignment Tracker container
+  hosts: app
+  become: true
+  tasks:
+    - name: Pull latest application image
+      community.docker.docker_image:
+        name: devops-assignment-tracker
+        source: pull
+        force_source: true
+    - name: Run application container
+      community.docker.docker_container:
+        name: assignment-tracker
+        image: devops-assignment-tracker
+        state: started
+        restart_policy: always
+        published_ports:
+          - "3000:3000"
